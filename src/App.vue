@@ -1,5 +1,5 @@
 <template lang="pug">
-  #app(:style="cssVars")
+  #app(:style="cssVars" :class="[$mq]")
     component(:is="layout")
       router-view
 </template>
