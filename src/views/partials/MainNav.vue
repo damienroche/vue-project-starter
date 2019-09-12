@@ -1,9 +1,8 @@
 <template lang="pug">
-  aside.menu
-    p.menu-label Main Nav
-    ul.menu-list
-      li
-        router-link(:to="{ name: 'home' }") Home
-      li
-        router-link(:to="{ name: 'about' }") About
+  nav.navbar.has-shadow(role="navigation" aria-label="main navigation")
+    .container
+      .navbar-menu
+        .navbar-start
+          router-link.navbar-item(:to="{ name: 'home' }") Home
+          router-link.navbar-item(:to="{ name: 'about' }") About
 </template>

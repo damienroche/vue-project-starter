@@ -1,8 +1,7 @@
 <template lang="pug">
-  .container.u-flex.u-flex-start-start.u-gap-20
-    .main-nav
-      main-nav
-    .page-content.flex-1
+  div
+    main-nav
+    .page-content.container
       slot
 </template>
 
