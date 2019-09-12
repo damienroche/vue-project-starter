@@ -1,9 +1,7 @@
 <template lang="pug">
   .home
-    h1.has-text-primary Home page
+    h1 Home page
     hello-world
-    select
-      option 1
 </template>
 
 <script lang="ts">

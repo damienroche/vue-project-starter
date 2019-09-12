@@ -1,8 +1,9 @@
 <template lang="pug">
-  div
-    div Default Layout
-    main-nav
-    slot
+  .container.u-flex.u-flex-start-start.u-gap-20
+    .main-nav
+      main-nav
+    .page-content.flex-1
+      slot
 </template>
 
 <script lang="ts">

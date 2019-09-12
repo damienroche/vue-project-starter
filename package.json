@@ -9,7 +9,9 @@
     "svg": "vsvg -s ./src/assets/svg -t ./src/assets/icons"
   },
   "dependencies": {
+    "@juno.dev/sass-utils": "^0.0.1-beta.0",
     "axios": "^0.19.0",
+    "bulma": "^0.7.5",
     "core-js": "^2.6.5",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
