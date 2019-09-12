@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex, { StoreOptions, GetterTree, MutationTree, ActionTree } from 'vuex'
+import createPersistedState from 'vuex-persistedstate'
 
-import RootState from './RootState'
+import RootState, { INITIAL_STATE } from './RootState'
 
 Vue.use(Vuex)
 
@@ -29,13 +30,17 @@ const rootActions: ActionTree<RootState, RootState> = {
 
 const storeOptions: StoreOptions<RootState> = {
   state: {
-    token: null
+    ...INITIAL_STATE
   },
   getters: rootGetters,
   mutations: rootMutations,
   actions: rootActions,
   modules: {},
-  plugins: []
+  plugins: [
+    createPersistedState({
+      key: process.env.VUE_APP_PERSISTED_STATE_KEY
+    })
+  ]
 }
 
 export default new Vuex.Store(storeOptions)
