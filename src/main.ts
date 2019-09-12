@@ -1,9 +1,11 @@
 // Assets
 import '@/assets/stylesheets/main.sass'
+import '@/assets/icons'
 
 // Libs
 import Vue from 'vue'
 import VueMq from 'vue-mq'
+import SvgIcon from 'vue-svgicon'
 
 // App
 import App from './views/App.vue'
@@ -23,6 +25,10 @@ Vue.use(VueMq, {
     xl: Infinity
   }
 }) // fits with bulma variables -> https://bulma.io/documentation/customize/variables/
+
+Vue.use(SvgIcon, {
+  tagName: 'svg-icon'
+})
 
 // Config
 Vue.config.productionTip = false
